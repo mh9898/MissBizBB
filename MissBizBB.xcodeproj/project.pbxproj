@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71009E091C4BAE8B008EF86A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71009E081C4BAE8B008EF86A /* Social.framework */; };
 		71953C9C1C48E20600625A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9B1C48E20600625A06 /* AppDelegate.swift */; };
 		71953C9E1C48E20600625A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9D1C48E20600625A06 /* ViewController.swift */; };
 		71953CA11C48E20600625A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953C9F1C48E20600625A06 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71009E081C4BAE8B008EF86A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		71953C981C48E20600625A06 /* MissBizBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissBizBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71953C9B1C48E20600625A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71953C9D1C48E20600625A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71009E091C4BAE8B008EF86A /* Social.framework in Frameworks */,
 				71953D061C490A3500625A06 /* libsqlite3.tbd in Frameworks */,
 				71953D051C490A2A00625A06 /* libz.tbd in Frameworks */,
 				71953D041C490A2200625A06 /* SystemConfiguration.framework in Frameworks */,
@@ -179,6 +182,7 @@
 		71953D241C49242E00625A06 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				71009E081C4BAE8B008EF86A /* Social.framework */,
 				71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */,
 				71953D1A1C4910A900625A06 /* Bolts.framework */,
 				71953D1B1C4910A900625A06 /* Parse.framework */,

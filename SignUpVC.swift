@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import ParseFacebookUtilsV4
+import Social
 
 
 class SignUpVC: UIViewController {
@@ -17,11 +18,27 @@ class SignUpVC: UIViewController {
     
     @IBOutlet weak var ManicureSwitch: UISwitch!
     
-    @IBAction func logOut(sender: AnyObject) {
     
-        PFUser.logOut()
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func fbButt(sender: AnyObject) {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            
+            let fbSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            fbSheet.setInitialText("Use MissBeez")
+            fbSheet.addURL(NSURL(string: "http://www.missbeez.com/"))
+            presentViewController(fbSheet, animated: true, completion: nil)
+        }
+        else{
+            
+            let alert = UIAlertController(title: "No FB", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
     }
+    
+    
     @IBAction func submit(sender: AnyObject) {
         
         PFUser.currentUser()?["Manicure"] = ManicureSwitch.on
@@ -33,6 +50,8 @@ class SignUpVC: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             self.presentViewController(alert, animated: true, completion: nil)
+            
+            
         }
             
         catch{
@@ -41,11 +60,21 @@ class SignUpVC: UIViewController {
 
     }
     
+    @IBAction func logOut(sender: AnyObject) {
+        
+        PFUser.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let garphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, gender"])
+        let requestParameters = ["fields": "id, email, name, gender"]
+        
+        let garphRequest = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
+        
         garphRequest.startWithCompletionHandler {
             (connection, result, error) -> Void in
             
@@ -56,10 +85,14 @@ class SignUpVC: UIViewController {
             
             else if let result = result {
                 //print(result)
-            
+                
+                PFUser.currentUser()?["fbid"] = result["id"]
                 PFUser.currentUser()?["name"] = result["name"]
                 PFUser.currentUser()?["email"] = result["email"]
                 PFUser.currentUser()?["gender"] = result["gender"]
+                
+                
+                
                 
                 do{
                     try PFUser.currentUser()?.save()
@@ -69,11 +102,13 @@ class SignUpVC: UIViewController {
                 }
                 
                 let userId = result["id"] as! String
+                print(userId)
                 
-                let FBProfilePicturesUrl = "https://graph.facebook.com/" + userId + "/picture?type=large"
-                
-                    if let fbpicUrl = NSURL(string: FBProfilePicturesUrl) {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                    let FBProfilePicturesUrl = "https://graph.facebook.com/" + userId + "/picture?type=large"
                     
+                    if let fbpicUrl = NSURL(string: FBProfilePicturesUrl) {
+                        
                         if let data = NSData(contentsOfURL: fbpicUrl) {
                             
                             self.userImage.image = UIImage(data: data)
@@ -88,9 +123,14 @@ class SignUpVC: UIViewController {
                             catch{
                                 print(error)
                             }
-
+                            
                         }
                     }
+                    
+                    
+                }
+                
+                
             }
             
         }
