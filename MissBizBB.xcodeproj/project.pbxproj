@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71953C9C1C48E20600625A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9B1C48E20600625A06 /* AppDelegate.swift */; };
+		71953C9E1C48E20600625A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9D1C48E20600625A06 /* ViewController.swift */; };
+		71953CA11C48E20600625A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953C9F1C48E20600625A06 /* Main.storyboard */; };
+		71953CA31C48E20600625A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71953CA21C48E20600625A06 /* Assets.xcassets */; };
+		71953CA61C48E20600625A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953CA41C48E20600625A06 /* LaunchScreen.storyboard */; };
+		71953CB11C48E20700625A06 /* MissBizBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953CB01C48E20700625A06 /* MissBizBBTests.swift */; };
+		71953CBC1C48E20700625A06 /* MissBizBBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953CBB1C48E20700625A06 /* MissBizBBUITests.swift */; };
+		71953CE41C48EB6400625A06 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE31C48EB6400625A06 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		71953CE61C48EB7200625A06 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE51C48EB7200625A06 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		71953CF61C4909D500625A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF51C4909D500625A06 /* AudioToolbox.framework */; };
+		71953CF81C4909E100625A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF71C4909E100625A06 /* CFNetwork.framework */; };
+		71953CFA1C4909EC00625A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF91C4909EC00625A06 /* CoreGraphics.framework */; };
+		71953CFC1C4909F600625A06 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CFB1C4909F600625A06 /* CoreLocation.framework */; };
+		71953CFE1C490A0300625A06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CFD1C490A0300625A06 /* QuartzCore.framework */; };
+		71953D001C490A0D00625A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CFF1C490A0D00625A06 /* Security.framework */; };
+		71953D021C490A1900625A06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D011C490A1900625A06 /* StoreKit.framework */; };
+		71953D041C490A2200625A06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D031C490A2200625A06 /* SystemConfiguration.framework */; };
+		71953D051C490A2A00625A06 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CDD1C48E34200625A06 /* libz.tbd */; };
+		71953D061C490A3500625A06 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CDF1C48E34E00625A06 /* libsqlite3.tbd */; };
+		71953D1C1C4910A900625A06 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		71953D1D1C4910A900625A06 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1A1C4910A900625A06 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		71953D1E1C4910A900625A06 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1B1C4910A900625A06 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		71953D231C49241400625A06 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953D221C49241400625A06 /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71953CAD1C48E20700625A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71953C901C48E20600625A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71953C971C48E20600625A06;
+			remoteInfo = MissBizBB;
+		};
+		71953CB81C48E20700625A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71953C901C48E20600625A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71953C971C48E20600625A06;
+			remoteInfo = MissBizBB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71953C981C48E20600625A06 /* MissBizBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissBizBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71953C9B1C48E20600625A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71953C9D1C48E20600625A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71953CA01C48E20600625A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71953CA21C48E20600625A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71953CA51C48E20600625A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71953CA71C48E20600625A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71953CAC1C48E20700625A06 /* MissBizBBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissBizBBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71953CB01C48E20700625A06 /* MissBizBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissBizBBTests.swift; sourceTree = "<group>"; };
+		71953CB21C48E20700625A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71953CB71C48E20700625A06 /* MissBizBBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissBizBBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71953CBB1C48E20700625A06 /* MissBizBBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissBizBBUITests.swift; sourceTree = "<group>"; };
+		71953CBD1C48E20700625A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71953CDD1C48E34200625A06 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		71953CDF1C48E34E00625A06 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		71953CE31C48EB6400625A06 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		71953CE51C48EB7200625A06 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		71953CE71C48EE6100625A06 /* MissBizBB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MissBizBB-Bridging-Header.h"; sourceTree = "<group>"; };
+		71953CF51C4909D500625A06 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		71953CF71C4909E100625A06 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		71953CF91C4909EC00625A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		71953CFB1C4909F600625A06 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		71953CFD1C490A0300625A06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		71953CFF1C490A0D00625A06 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		71953D011C490A1900625A06 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		71953D031C490A2200625A06 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		71953D1A1C4910A900625A06 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		71953D1B1C4910A900625A06 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		71953D221C49241400625A06 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpVC.swift; path = ../SignUpVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71953C951C48E20600625A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71953D061C490A3500625A06 /* libsqlite3.tbd in Frameworks */,
+				71953D051C490A2A00625A06 /* libz.tbd in Frameworks */,
+				71953D041C490A2200625A06 /* SystemConfiguration.framework in Frameworks */,
+				71953D021C490A1900625A06 /* StoreKit.framework in Frameworks */,
+				71953D1E1C4910A900625A06 /* Parse.framework in Frameworks */,
+				71953D001C490A0D00625A06 /* Security.framework in Frameworks */,
+				71953CFE1C490A0300625A06 /* QuartzCore.framework in Frameworks */,
+				71953CFC1C4909F600625A06 /* CoreLocation.framework in Frameworks */,
+				71953CFA1C4909EC00625A06 /* CoreGraphics.framework in Frameworks */,
+				71953CF81C4909E100625A06 /* CFNetwork.framework in Frameworks */,
+				71953CF61C4909D500625A06 /* AudioToolbox.framework in Frameworks */,
+				71953CE61C48EB7200625A06 /* FBSDKLoginKit.framework in Frameworks */,
+				71953CE41C48EB6400625A06 /* FBSDKCoreKit.framework in Frameworks */,
+				71953D1C1C4910A900625A06 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				71953D1D1C4910A900625A06 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CA91C48E20700625A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CB41C48E20700625A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71953C8F1C48E20600625A06 = {
+			isa = PBXGroup;
+			children = (
+				71953D241C49242E00625A06 /* FrameWork */,
+				71953C9A1C48E20600625A06 /* MissBizBB */,
+				71953CAF1C48E20700625A06 /* MissBizBBTests */,
+				71953CBA1C48E20700625A06 /* MissBizBBUITests */,
+				71953C991C48E20600625A06 /* Products */,
+				71953CE71C48EE6100625A06 /* MissBizBB-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		71953C991C48E20600625A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71953C981C48E20600625A06 /* MissBizBB.app */,
+				71953CAC1C48E20700625A06 /* MissBizBBTests.xctest */,
+				71953CB71C48E20700625A06 /* MissBizBBUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71953C9A1C48E20600625A06 /* MissBizBB */ = {
+			isa = PBXGroup;
+			children = (
+				71953C9B1C48E20600625A06 /* AppDelegate.swift */,
+				71953C9D1C48E20600625A06 /* ViewController.swift */,
+				71953D221C49241400625A06 /* SignUpVC.swift */,
+				71953C9F1C48E20600625A06 /* Main.storyboard */,
+				71953CA21C48E20600625A06 /* Assets.xcassets */,
+				71953CA41C48E20600625A06 /* LaunchScreen.storyboard */,
+				71953CA71C48E20600625A06 /* Info.plist */,
+			);
+			path = MissBizBB;
+			sourceTree = "<group>";
+		};
+		71953CAF1C48E20700625A06 /* MissBizBBTests */ = {
+			isa = PBXGroup;
+			children = (
+				71953CB01C48E20700625A06 /* MissBizBBTests.swift */,
+				71953CB21C48E20700625A06 /* Info.plist */,
+			);
+			path = MissBizBBTests;
+			sourceTree = "<group>";
+		};
+		71953CBA1C48E20700625A06 /* MissBizBBUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71953CBB1C48E20700625A06 /* MissBizBBUITests.swift */,
+				71953CBD1C48E20700625A06 /* Info.plist */,
+			);
+			path = MissBizBBUITests;
+			sourceTree = "<group>";
+		};
+		71953D241C49242E00625A06 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */,
+				71953D1A1C4910A900625A06 /* Bolts.framework */,
+				71953D1B1C4910A900625A06 /* Parse.framework */,
+				71953D031C490A2200625A06 /* SystemConfiguration.framework */,
+				71953D011C490A1900625A06 /* StoreKit.framework */,
+				71953CFF1C490A0D00625A06 /* Security.framework */,
+				71953CFD1C490A0300625A06 /* QuartzCore.framework */,
+				71953CFB1C4909F600625A06 /* CoreLocation.framework */,
+				71953CF91C4909EC00625A06 /* CoreGraphics.framework */,
+				71953CF71C4909E100625A06 /* CFNetwork.framework */,
+				71953CF51C4909D500625A06 /* AudioToolbox.framework */,
+				71953CE51C48EB7200625A06 /* FBSDKLoginKit.framework */,
+				71953CE31C48EB6400625A06 /* FBSDKCoreKit.framework */,
+				71953CDF1C48E34E00625A06 /* libsqlite3.tbd */,
+				71953CDD1C48E34200625A06 /* libz.tbd */,
+			);
+			name = FrameWork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71953C971C48E20600625A06 /* MissBizBB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71953CC01C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBB" */;
+			buildPhases = (
+				71953C941C48E20600625A06 /* Sources */,
+				71953C951C48E20600625A06 /* Frameworks */,
+				71953C961C48E20600625A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MissBizBB;
+			productName = MissBizBB;
+			productReference = 71953C981C48E20600625A06 /* MissBizBB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71953CAB1C48E20700625A06 /* MissBizBBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71953CC31C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBBTests" */;
+			buildPhases = (
+				71953CA81C48E20700625A06 /* Sources */,
+				71953CA91C48E20700625A06 /* Frameworks */,
+				71953CAA1C48E20700625A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71953CAE1C48E20700625A06 /* PBXTargetDependency */,
+			);
+			name = MissBizBBTests;
+			productName = MissBizBBTests;
+			productReference = 71953CAC1C48E20700625A06 /* MissBizBBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		71953CB61C48E20700625A06 /* MissBizBBUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71953CC61C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBBUITests" */;
+			buildPhases = (
+				71953CB31C48E20700625A06 /* Sources */,
+				71953CB41C48E20700625A06 /* Frameworks */,
+				71953CB51C48E20700625A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71953CB91C48E20700625A06 /* PBXTargetDependency */,
+			);
+			name = MissBizBBUITests;
+			productName = MissBizBBUITests;
+			productReference = 71953CB71C48E20700625A06 /* MissBizBBUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71953C901C48E20600625A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = MicahelH;
+				TargetAttributes = {
+					71953C971C48E20600625A06 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					71953CAB1C48E20700625A06 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 71953C971C48E20600625A06;
+					};
+					71953CB61C48E20700625A06 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 71953C971C48E20600625A06;
+					};
+				};
+			};
+			buildConfigurationList = 71953C931C48E20600625A06 /* Build configuration list for PBXProject "MissBizBB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71953C8F1C48E20600625A06;
+			productRefGroup = 71953C991C48E20600625A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71953C971C48E20600625A06 /* MissBizBB */,
+				71953CAB1C48E20700625A06 /* MissBizBBTests */,
+				71953CB61C48E20700625A06 /* MissBizBBUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71953C961C48E20600625A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71953CA61C48E20600625A06 /* LaunchScreen.storyboard in Resources */,
+				71953CA31C48E20600625A06 /* Assets.xcassets in Resources */,
+				71953CA11C48E20600625A06 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CAA1C48E20700625A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CB51C48E20700625A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71953C941C48E20600625A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71953C9E1C48E20600625A06 /* ViewController.swift in Sources */,
+				71953D231C49241400625A06 /* SignUpVC.swift in Sources */,
+				71953C9C1C48E20600625A06 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CA81C48E20700625A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71953CB11C48E20700625A06 /* MissBizBBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71953CB31C48E20700625A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71953CBC1C48E20700625A06 /* MissBizBBUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71953CAE1C48E20700625A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71953C971C48E20600625A06 /* MissBizBB */;
+			targetProxy = 71953CAD1C48E20700625A06 /* PBXContainerItemProxy */;
+		};
+		71953CB91C48E20700625A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71953C971C48E20600625A06 /* MissBizBB */;
+			targetProxy = 71953CB81C48E20700625A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71953C9F1C48E20600625A06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71953CA01C48E20600625A06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71953CA41C48E20600625A06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71953CA51C48E20600625A06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71953CBE1C48E20700625A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71953CBF1C48E20700625A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71953CC11C48E20700625A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MissBizBB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mh.MissBizBB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MissBizBB-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71953CC21C48E20700625A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MissBizBB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mh.MissBizBB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MissBizBB-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		71953CC41C48E20700625A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MissBizBBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mh.MissBizBBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissBizBB.app/MissBizBB";
+			};
+			name = Debug;
+		};
+		71953CC51C48E20700625A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MissBizBBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mh.MissBizBBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissBizBB.app/MissBizBB";
+			};
+			name = Release;
+		};
+		71953CC71C48E20700625A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MissBizBBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mh.MissBizBBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MissBizBB;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		71953CC81C48E20700625A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MissBizBBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mh.MissBizBBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MissBizBB;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71953C931C48E20600625A06 /* Build configuration list for PBXProject "MissBizBB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71953CBE1C48E20700625A06 /* Debug */,
+				71953CBF1C48E20700625A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71953CC01C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71953CC11C48E20700625A06 /* Debug */,
+				71953CC21C48E20700625A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71953CC31C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71953CC41C48E20700625A06 /* Debug */,
+				71953CC51C48E20700625A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71953CC61C48E20700625A06 /* Build configuration list for PBXNativeTarget "MissBizBBUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71953CC71C48E20700625A06 /* Debug */,
+				71953CC81C48E20700625A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71953C901C48E20600625A06 /* Project object */;
+}
