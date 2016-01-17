@@ -31,13 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize FB.
         
-            PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+//            PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
                
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
+            //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

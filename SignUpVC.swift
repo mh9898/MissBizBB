@@ -14,59 +14,11 @@ import Social
 
 class SignUpVC: UIViewController {
 
+    @IBOutlet weak var logoImage: UIImageView!
+    
     @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var ManicureSwitch: UISwitch!
-    
-    
-    @IBAction func fbButt(sender: AnyObject) {
-        
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            
-            let fbSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            fbSheet.setInitialText("Use MissBeez")
-            fbSheet.addURL(NSURL(string: "http://www.missbeez.com/"))
-            presentViewController(fbSheet, animated: true, completion: nil)
-        }
-        else{
-            
-            let alert = UIAlertController(title: "No FB", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-        
-    }
-    
-    
-    @IBAction func submit(sender: AnyObject) {
-        
-        PFUser.currentUser()?["Manicure"] = ManicureSwitch.on
-        
-        do{
-            try PFUser.currentUser()?.save()
-            
-            let alert = UIAlertController(title: "Sucess", message: "Thank you for sumbiting", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-            
-            
-        }
-            
-        catch{
-            print(error)
-        }
-
-    }
-    
-    @IBAction func logOut(sender: AnyObject) {
-        
-        PFUser.logOut()
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +43,6 @@ class SignUpVC: UIViewController {
                 PFUser.currentUser()?["email"] = result["email"]
                 PFUser.currentUser()?["gender"] = result["gender"]
                 
-                
-                
-                
                 do{
                     try PFUser.currentUser()?.save()
                 }
@@ -104,39 +53,82 @@ class SignUpVC: UIViewController {
                 let userId = result["id"] as! String
                 print(userId)
                 
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                    let FBProfilePicturesUrl = "https://graph.facebook.com/" + userId + "/picture?type=large"
+                
+                let FBProfilePicturesUrl = "https://graph.facebook.com/" + userId + "/picture?type=large"
                     
                     if let fbpicUrl = NSURL(string: FBProfilePicturesUrl) {
                         
-                        if let data = NSData(contentsOfURL: fbpicUrl) {
-                            
-                            self.userImage.image = UIImage(data: data)
-                            
-                            let imageFile:PFFile = PFFile(data: data)!
-                            
-                            PFUser.currentUser()?["image"] = imageFile
-                            
-                            do{
-                                try PFUser.currentUser()?.save()
-                            }
-                            catch{
-                                print(error)
-                            }
-                            
-                        }
+                        self.userImage.sd_setImageWithURL(fbpicUrl)
                     }
-                    
-                    
-                }
-                
-                
+                        //maybe the imageview is during download, so cancel the download
+                        else{
+                           self.userImage.sd_cancelCurrentImageLoad()
+                            self.userImage.image = nil
+                        }
             }
             
         }
 
-        // Do any additional setup after loading the view.
     }
+    
+    @IBAction func fbButt() {
+        
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            
+            let fbSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            fbSheet.addURL(NSURL(string: "http://www.missbeez.com/"))
+            
+            presentViewController(fbSheet, animated: true, completion: nil)
+        }
+            
+        else{
+            
+            let alert = UIAlertController(title: "No FB", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func submit(sender: AnyObject) {
+        
+        PFUser.currentUser()?["Manicure"] = ManicureSwitch.on
+        
+        do{
+            try PFUser.currentUser()?.save()
+            
+            let alert = UIAlertController(title: "Sucess", message: "Thank you for sumbiting", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+            
+        catch{
+            print(error)
+        }
+    }
+    
+    @IBAction func yourFB(sender: AnyObject) {
+        
+        
+//        let fbURLid: NSURL = NSURL(string: "fb://profile/")!
+//        
+//        
+//        
+//        if (UIApplication.sharedApplication().canOpenURL(fbURLid)){
+//            
+//            UIApplication.sharedApplication().openURL(fbURLid)
+//        }
+        
+    }
+    @IBAction func logOut(sender: AnyObject) {
+        
+        PFUser.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

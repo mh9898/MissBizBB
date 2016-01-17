@@ -29,7 +29,7 @@ class ViewController: UIViewController {
                     print(error)
                 }
                 else{
-                    if let user = user{
+                    if let user = user {
                         self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
                     }
                     
