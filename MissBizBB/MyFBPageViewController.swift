@@ -29,7 +29,7 @@ class MyFBPageViewController: UIViewController {
         super.viewDidLoad()
         
 
-        let url = NSURL(string: "fb://feed")
+        let url = NSURL(string: "fb://profile")
         
         let request = NSURLRequest(URL: url!)
         
