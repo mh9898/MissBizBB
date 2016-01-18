@@ -10,6 +10,19 @@ import UIKit
 
 class MyFBPageViewController: UIViewController {
 
+    
+    @IBAction func youTube(sender: AnyObject) {
+        
+        let url = NSURL(string: "https://www.youtube.com/watch?v=Of9LPT_tRXU")
+        
+        let request = NSURLRequest(URL: url!)
+        
+        webView.loadRequest(request)
+        
+        
+        
+    }
+   
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {

@@ -84,7 +84,7 @@ class SignUpVC: UIViewController {
             
         else{
             
-            let alert = UIAlertController(title: "No FB", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "FB Setup", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             self.presentViewController(alert, animated: true, completion: nil)
@@ -110,23 +110,10 @@ class SignUpVC: UIViewController {
         }
     }
     
-    @IBAction func yourFB(sender: AnyObject) {
-        
-        
-//        let fbURLid: NSURL = NSURL(string: "fb://profile/")!
-//        
-//        
-//        
-//        if (UIApplication.sharedApplication().canOpenURL(fbURLid)){
-//            
-//            UIApplication.sharedApplication().openURL(fbURLid)
-//        }
-        
-    }
-    @IBAction func logOut(sender: AnyObject) {
+        @IBAction func logOut(sender: AnyObject) {
         
         PFUser.logOut()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
 
