@@ -18,9 +18,6 @@ class MyFBPageViewController: UIViewController {
         let request = NSURLRequest(URL: url!)
         
         webView.loadRequest(request)
-        
-        
-        
     }
    
     @IBOutlet weak var webView: UIWebView!
@@ -28,7 +25,6 @@ class MyFBPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         let url = NSURL(string: "fb://profile")
         
         let request = NSURLRequest(URL: url!)
