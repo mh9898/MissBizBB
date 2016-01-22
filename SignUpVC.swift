@@ -23,50 +23,6 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var urlArray = ["https://tangentlabs-nailsinc-prod.s3.amazonaws.com/cache/21/c2/21c2974d2b3b36713a5cecafe65dc3f8.jpg",
-            "https://tangentlabs-nailsinc-prod.s3.amazonaws.com/cache/e9/1f/e91fd242affdfcbbb6e1eaaefc16f2e9.jpg",
-            "https://tangentlabs-nailsinc-prod.s3.amazonaws.com/cache/ce/ff/ceff3c89d6a8608725ad029097e907f7.jpg",
-            "https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/s640x640/sh0.08/e35/12530723_1729825740583091_1739270513_n.jpg",
-            "https://scontent.cdninstagram.com/hphotos-xtp1/t51.2885-15/s640x640/sh0.08/e35/12627849_869163899871391_144609289_n.jpg",
-            "https://tangentlabs-nailsinc-prod.s3.amazonaws.com/cache/1e/01/1e01ce5a03fdcac91ac6f69dff61155f.jpg"
-        ]
-        
-        var contuer = 1
-        
-        for url in urlArray {
-            
-            let nsUrl = NSURL(string: url)!
-            print(nsUrl)
-            
-            if let data = NSData(contentsOfURL: nsUrl) {
-                
-                self.userImage.image = UIImage(data: data)
-                
-                let imageFile: PFFile = PFFile(data: data)!
-                
-                var user:PFUser = PFUser()
-                
-                let username = "user\(contuer)"
-                
-                user.username = username
-                user.password = "pass"
-                user["image"] = imageFile
-                user["Manicure"] = true
-                
-                contuer++
-                
-                do{
-                    
-                    try user.signUp()
-                }
-                catch{
-                    print(error)
-                }
-
-            }
-        }
-
-        
         let requestParameters = ["fields": "id, email, name, gender"]
         
         let garphRequest = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
@@ -129,10 +85,17 @@ class SignUpVC: UIViewController {
         else{
             
             let alert = UIAlertController(title: "FB Setup", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
+            
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             self.presentViewController(alert, animated: true, completion: nil)
+            
+//            self.performSegueWithIdentifier("loginManicure", sender: AnyObject?)
         }
+    }
+    
+    func okAction(){
+        self.performSegueWithIdentifier("manicureSegue", sender: self)
     }
     
     
@@ -144,14 +107,23 @@ class SignUpVC: UIViewController {
             try PFUser.currentUser()?.save()
             
             let alert = UIAlertController(title: "Sucess", message: "Thank you for sumbiting", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.performSegueWithIdentifier("manicureSegue", sender: self)})
+            
+            alert.addAction(okAction)
             
             self.presentViewController(alert, animated: true, completion: nil)
+            
+            
         }
+            
             
         catch{
             print(error)
         }
+        
+       
     }
     
         @IBAction func logOut(sender: AnyObject) {

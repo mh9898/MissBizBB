@@ -25,18 +25,34 @@ class ViewController: UIViewController {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions){
             (user:PFUser?, error:NSError?) -> Void in
             
-                if let error = error {
-                    print(error)
-                }
-                else{
-                    if let user = user {
-                        self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
+            if let error = error {
+                print(error)
+            }
+                
+            else{
+                
+                if let user = user {
+                    
+                    if let manicureUser = user["Manicure"] {
+                        
+                        self.performSegueWithIdentifier("loginManicure", sender: self)
                     }
+                        
+                    else
+                    {
+                       self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
+                    }
+                   
+                    
+                    
+                    
                     
                 }
-        
+                
             }
-    }
+    
+        }
+}
     
     override func viewDidAppear(animated: Bool) {
         
