@@ -55,13 +55,19 @@ class ManicureVC: UIViewController {
             if label.center.x < 100 {
                 print("Not chosen" + displayedUserId)//label.center.x
                 
+                swipeResult.text = "rejected"
+                
                 acceptedOrRejected = "rejected"
             }
                 //Right
             else if label.center.x > self.view.bounds.width - 100 {
                 print("Chosen")
+                swipeResult.text = "accepted"
                 
                 acceptedOrRejected = "accepted"
+            }
+            else{
+                swipeResult.text = "Not chosen"
             }
             
             if acceptedOrRejected != "" {
@@ -101,17 +107,29 @@ class ManicureVC: UIViewController {
         }
         query?.whereKey("Professional", equalTo: "manicure")
         
+        
+        var ignoreUsers = [""]
+        
+        
         if let acceptedUsers = PFUser.currentUser()?["accepted"] {
             
-            query?.whereKey("objectId", notContainedIn: acceptedUsers as! Array)
+            ignoreUsers += acceptedUsers as! Array
             
         }
         
         if let rejectedUsers = PFUser.currentUser()?["rejected"] {
             
-            query?.whereKey("objectId", notContainedIn: rejectedUsers as! Array)
+            ignoreUsers += rejectedUsers as! Array
             
         }
+        
+        
+        if ignoreUsers.count == 6 {
+            
+            print("last")
+        }
+        
+        query?.whereKey("objectId", notContainedIn: ignoreUsers)
         
         
         query?.limit = 1
