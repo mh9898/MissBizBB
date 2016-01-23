@@ -28,6 +28,7 @@
 		71009E401C4C3EDD008EF86A /* MyFBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */; };
 		716BDBEC1C53DF30006375B6 /* ManicureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BDBEB1C53DF30006375B6 /* ManicureVC.swift */; };
 		716BDBEE1C53E64F006375B6 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 716BDBED1C53E64F006375B6 /* swipe.png */; };
+		716BDBF01C541969006375B6 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BDBEF1C541969006375B6 /* ContactsViewController.swift */; };
 		71953C9C1C48E20600625A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9B1C48E20600625A06 /* AppDelegate.swift */; };
 		71953C9E1C48E20600625A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9D1C48E20600625A06 /* ViewController.swift */; };
 		71953CA11C48E20600625A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953C9F1C48E20600625A06 /* Main.storyboard */; };
@@ -109,6 +110,7 @@
 		71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFBPageViewController.swift; sourceTree = "<group>"; };
 		716BDBEB1C53DF30006375B6 /* ManicureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManicureVC.swift; sourceTree = "<group>"; };
 		716BDBED1C53E64F006375B6 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		716BDBEF1C541969006375B6 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		71953C981C48E20600625A06 /* MissBizBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissBizBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71953C9B1C48E20600625A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71953C9D1C48E20600625A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				71953D221C49241400625A06 /* SignUpVC.swift */,
 				716BDBEB1C53DF30006375B6 /* ManicureVC.swift */,
 				71953C9F1C48E20600625A06 /* Main.storyboard */,
+				716BDBEF1C541969006375B6 /* ContactsViewController.swift */,
 				71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */,
 				71953CA21C48E20600625A06 /* Assets.xcassets */,
 				71953CA41C48E20600625A06 /* LaunchScreen.storyboard */,
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71009E3A1C4C0022008EF86A /* UIImageView+HighlightedWebCache.m in Sources */,
+				716BDBF01C541969006375B6 /* ContactsViewController.swift in Sources */,
 				71009E2E1C4C0022008EF86A /* NSData+ImageContentType.m in Sources */,
 				71009E341C4C0022008EF86A /* SDWebImageManager.m in Sources */,
 				71009E321C4C0022008EF86A /* SDWebImageDownloader.m in Sources */,

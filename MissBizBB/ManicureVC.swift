@@ -14,6 +14,8 @@ class ManicureVC: UIViewController {
     var intestedIn = ""
     
     var displayedUserId = ""
+    
+    var acceptedUsers = [NSArray]()
 
     @IBOutlet weak var userImage: UIImageView!
     
@@ -115,6 +117,7 @@ class ManicureVC: UIViewController {
             
             ignoreUsers += acceptedUsers as! Array
             
+            
         }
         
         if let rejectedUsers = PFUser.currentUser()?["rejected"] {
@@ -123,11 +126,17 @@ class ManicureVC: UIViewController {
             
         }
         
+        let mancuirePro : Array = [(PFUser.currentUser()?["Manicure"])! as! Bool == true]
         
-        if ignoreUsers.count == 6 {
-            
-            print("last")
-        }
+        
+        //mancuirePro.count
+//        if ignoreUsers.count ==  6 {
+//            
+//            //self.performSegueWithIdentifier("manicureSegue", sender: self)
+////            self.dismissViewControllerAnimated(true, completion: nil);
+//        
+//            print("last")
+//        }
         
         query?.whereKey("objectId", notContainedIn: ignoreUsers)
         
