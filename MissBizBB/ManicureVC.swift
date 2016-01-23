@@ -10,6 +10,10 @@ import UIKit
 import Parse
 
 class ManicureVC: UIViewController {
+    
+    var intestedIn = ""
+    
+    var displayedUserId = ""
 
     @IBOutlet weak var userImage: UIImageView!
     
@@ -45,48 +49,71 @@ class ManicureVC: UIViewController {
         //CENTER ON RELESE
         if gesture.state == UIGestureRecognizerState.Ended {
             
+            var acceptedOrRejected = ""
+            
             //Mid left
             if label.center.x < 100 {
-                print("Not chosen \(label.center.x)")
+                print("Not chosen" + displayedUserId)//label.center.x
+                
+                acceptedOrRejected = "rejected"
             }
                 //Right
             else if label.center.x > self.view.bounds.width - 100 {
                 print("Chosen")
+                
+                acceptedOrRejected = "accepted"
             }
+            
+            if acceptedOrRejected != "" {
+                
+                PFUser.currentUser()?.addUniqueObjectsFromArray([displayedUserId], forKey: acceptedOrRejected)
+                
+                do{
+                    try PFUser.currentUser()?.save()
+                }
+                catch{
+                    print(error)
+                }
+
+                
+            }
+            
+            
             
             rotation = CGAffineTransformMakeRotation(0)
             stretch = CGAffineTransformScale(rotation, 1, 1)
             label.transform = stretch
             label.center = CGPoint(x: self.view.bounds.width / 2 , y: self.view.bounds.height / 2)
             
+            updateImage()
+            
         }
-        
-        
     }
 
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func updateImage(){
         
-        let gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:"))
-        userImage.addGestureRecognizer(gesture)
         
-        userImage.userInteractionEnabled = true
-        
-        userImage.layer.cornerRadius = 10
-        userImage.clipsToBounds = true
-        
-        var intestedIn = ""
-
-        var query = PFUser.query()
+        let query = PFUser.query()
         
         if (PFUser.currentUser()?["Manicure"])! as! Bool == true {
             
             intestedIn = "manicure"
         }
         query?.whereKey("Professional", equalTo: "manicure")
+        
+        if let acceptedUsers = PFUser.currentUser()?["accepted"] {
+            
+            query?.whereKey("objectId", notContainedIn: acceptedUsers as! Array)
+            
+        }
+        
+        if let rejectedUsers = PFUser.currentUser()?["rejected"] {
+            
+            query?.whereKey("objectId", notContainedIn: rejectedUsers as! Array)
+            
+        }
+        
+        
         query?.limit = 1
         
         query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
@@ -95,11 +122,11 @@ class ManicureVC: UIViewController {
                 
                 print(error)
             }
-            else if let objects = objects as? [PFObject]! {
+            else if let objects = objects {
                 
                 for object in objects {
                     
-                    print("object \(object)")
+                    self.displayedUserId = object.objectId!
                     
                     let imageFile = object["image"] as! PFFile
                     
@@ -109,7 +136,7 @@ class ManicureVC: UIViewController {
                             
                             print(error)
                         }
-                        
+                            
                         else{
                             
                             if let data = imageData {
@@ -124,6 +151,26 @@ class ManicureVC: UIViewController {
                 
             }
         })
+
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:"))
+        userImage.addGestureRecognizer(gesture)
+        
+        userImage.userInteractionEnabled = true
+        
+        updateImage()
+        
+        userImage.layer.cornerRadius = 10
+        userImage.clipsToBounds = true
+        
+        
+
         
     }
 
