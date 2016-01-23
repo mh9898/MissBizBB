@@ -302,6 +302,11 @@
                                             <segue destination="0Ws-4l-OcX" kind="show" id="wHr-iI-Vde"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Delete" id="WMU-bE-ivd">
+                                        <connections>
+                                            <action selector="de:" destination="lsr-2j-qWk" id="Ylu-bM-UdL"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>

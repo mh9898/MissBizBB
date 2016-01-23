@@ -12,14 +12,28 @@ import Parse
 
 class ContactsViewController: UITableViewController {
     
-    var usernames = [String]()
+    @IBAction func de(sender: AnyObject) {
+        
+//        let query = PFUser.query()!
+//        
+//        query.whereKey("objectId", containedIn: PFUser.currentUser()?["accepted"] as! [String])
+//        
+//        query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+//           
+//            for result in results! {
+//                result.deleteEventually()
+//            }
+//            
+//        }
+//
+    }
+       var usernames = [String]()
     var images = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let query = PFUser.query()!
-        //query.whereKey("objectId", containedIn: (PFUser.currentUser()?["accepted"]) as! Array)
         
         query.whereKey("objectId", containedIn: PFUser.currentUser()?["accepted"] as! [String])
         
