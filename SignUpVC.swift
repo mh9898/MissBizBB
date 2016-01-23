@@ -94,9 +94,7 @@ class SignUpVC: UIViewController {
         }
     }
     
-    func okAction(){
-        self.performSegueWithIdentifier("manicureSegue", sender: self)
-    }
+   
     
     
     @IBAction func submit(sender: AnyObject) {

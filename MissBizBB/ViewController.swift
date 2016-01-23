@@ -34,7 +34,6 @@ class ViewController: UIViewController {
                 if let user = user {
                     
                     if let manicureUser = user["Manicure"] {
-                        
                         self.performSegueWithIdentifier("loginManicure", sender: self)
                     }
                         
@@ -43,9 +42,6 @@ class ViewController: UIViewController {
                        self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
                     }
                    
-                    
-                    
-                    
                     
                 }
                 
@@ -59,13 +55,21 @@ class ViewController: UIViewController {
 //        PFUser.logOut()
         
         //if user exsit log in automaticlly
-        if let username = PFUser.currentUser()?.username{
+        if let username = PFUser.currentUser()?.username {
             
-            performSegueWithIdentifier("ShowSgininScreen", sender: self)
-        }
+            if let manicureUser = PFUser.currentUser()!["Manicure"] {
+                self.performSegueWithIdentifier("loginManicure", sender: self)
+            }
+                
+            else
+            {
+                self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
+            }
         
     }
     
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -48,6 +48,7 @@
                     <navigationItem key="navigationItem" id="eat-IO-6oQ"/>
                     <connections>
                         <segue destination="y6X-nj-Wsh" kind="show" identifier="ShowSgininScreen" id="h3N-b6-GiQ"/>
+                        <segue destination="0Ws-4l-OcX" kind="show" identifier="loginManicure" id="CuL-vC-83T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -199,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="1945" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--ManicureVC-->
         <scene sceneID="gqI-la-tzJ">
             <objects>
-                <viewController id="0Ws-4l-OcX" sceneMemberID="viewController">
+                <viewController id="0Ws-4l-OcX" customClass="ManicureVC" customModule="MissBizBB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TXD-L6-fkP"/>
                         <viewControllerLayoutGuide type="bottom" id="8iX-r4-TMM"/>
@@ -212,14 +213,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manicure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-mR-lKP">
-                                <rect key="frame" x="20" y="28" width="71" height="21"/>
+                                <rect key="frame" x="20" y="62" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-Dx-Zvg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Manicure" id="sXC-mb-wQx">
+                                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="D9V-be-6Qt">
+                                            <connections>
+                                                <action selector="logOut:" destination="0Ws-4l-OcX" id="yWR-ho-axA"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="cwd-JP-7aa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipe.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-Sg-Bm9">
+                                <rect key="frame" x="236" y="461" width="128" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="MPK-g8-uOv"/>
+                                    <constraint firstAttribute="width" constant="128" id="tdo-YW-dSW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW2-J6-PFK">
+                                <rect key="frame" x="214" y="551" width="172" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TTP-gc-G5v"/>
+                                    <constraint firstAttribute="width" constant="172" id="XkQ-EC-lYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-Aw-uJL">
+                                <rect key="frame" x="180" y="163" width="240" height="273"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8xr-xG-dbk"/>
+                                    <constraint firstAttribute="height" constant="273" id="Srz-vg-ZwF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Bq-Dx-Zvg" firstAttribute="top" secondItem="yqS-5K-8Cb" secondAttribute="topMargin" id="DOj-eI-X9F"/>
+                            <constraint firstItem="WOf-Aw-uJL" firstAttribute="centerY" secondItem="yqS-5K-8Cb" secondAttribute="centerY" id="Oh9-fq-CAv"/>
+                            <constraint firstItem="WOf-Aw-uJL" firstAttribute="centerX" secondItem="yqS-5K-8Cb" secondAttribute="centerX" id="boB-bW-nGN"/>
+                            <constraint firstItem="CW2-J6-PFK" firstAttribute="centerX" secondItem="yqS-5K-8Cb" secondAttribute="centerX" id="gwF-wq-1kD"/>
+                            <constraint firstItem="F2h-Sg-Bm9" firstAttribute="centerX" secondItem="yqS-5K-8Cb" secondAttribute="centerX" id="hHy-e0-Wul"/>
+                            <constraint firstItem="F2h-Sg-Bm9" firstAttribute="top" secondItem="WOf-Aw-uJL" secondAttribute="bottom" constant="25" id="iPV-Ez-Llm"/>
+                            <constraint firstItem="CW2-J6-PFK" firstAttribute="top" secondItem="F2h-Sg-Bm9" secondAttribute="bottom" constant="22" id="iYm-Xb-fwY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Bq-Dx-Zvg" secondAttribute="trailing" constant="-20" id="pHA-FL-lkd"/>
+                            <constraint firstItem="0Bq-Dx-Zvg" firstAttribute="leading" secondItem="yqS-5K-8Cb" secondAttribute="leadingMargin" constant="-20" id="wqx-1D-dzV"/>
+                            <constraint firstItem="WOf-Aw-uJL" firstAttribute="top" secondItem="0Bq-Dx-Zvg" secondAttribute="bottom" constant="119" id="yWy-Cq-j6B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="swipeResult" destination="CW2-J6-PFK" id="RiD-3I-EP1"/>
+                        <outlet property="userImage" destination="WOf-Aw-uJL" id="L1w-8m-Acb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8t-6c-SNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,8 +344,11 @@
     </scenes>
     <resources>
         <image name="missbeez.png" width="119" height="86"/>
+        <image name="swipe.png" width="270" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="CuL-vC-83T"/>
+        <segue reference="cwd-JP-7aa"/>
         <segue reference="h3N-b6-GiQ"/>
     </inferredMetricsTieBreakers>
 </document>

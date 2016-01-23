@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		71009E091C4BAE8B008EF86A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71009E081C4BAE8B008EF86A /* Social.framework */; };
-		71009E2D1C4C0022008EF86A /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E0D1C4C0022008EF86A /* MKAnnotationView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
-		71009E2E1C4C0022008EF86A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E0F1C4C0022008EF86A /* NSData+ImageContentType.m */; settings = {ASSET_TAGS = (); }; };
-		71009E2F1C4C0022008EF86A /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E111C4C0022008EF86A /* SDImageCache.m */; settings = {ASSET_TAGS = (); }; };
-		71009E301C4C0022008EF86A /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E131C4C0022008EF86A /* SDWebImageCompat.m */; settings = {ASSET_TAGS = (); }; };
-		71009E311C4C0022008EF86A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E151C4C0022008EF86A /* SDWebImageDecoder.m */; settings = {ASSET_TAGS = (); }; };
-		71009E321C4C0022008EF86A /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E171C4C0022008EF86A /* SDWebImageDownloader.m */; settings = {ASSET_TAGS = (); }; };
-		71009E331C4C0022008EF86A /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E191C4C0022008EF86A /* SDWebImageDownloaderOperation.m */; settings = {ASSET_TAGS = (); }; };
-		71009E341C4C0022008EF86A /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E1B1C4C0022008EF86A /* SDWebImageManager.m */; settings = {ASSET_TAGS = (); }; };
-		71009E351C4C0022008EF86A /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E1E1C4C0022008EF86A /* SDWebImagePrefetcher.m */; settings = {ASSET_TAGS = (); }; };
-		71009E361C4C0022008EF86A /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E201C4C0022008EF86A /* UIButton+WebCache.m */; settings = {ASSET_TAGS = (); }; };
-		71009E371C4C0022008EF86A /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E221C4C0022008EF86A /* UIImage+GIF.m */; settings = {ASSET_TAGS = (); }; };
-		71009E381C4C0022008EF86A /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E241C4C0022008EF86A /* UIImage+MultiFormat.m */; settings = {ASSET_TAGS = (); }; };
-		71009E391C4C0022008EF86A /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E261C4C0022008EF86A /* UIImage+WebP.m */; settings = {ASSET_TAGS = (); }; };
-		71009E3A1C4C0022008EF86A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E281C4C0022008EF86A /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
-		71009E3B1C4C0022008EF86A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E2A1C4C0022008EF86A /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
-		71009E3C1C4C0022008EF86A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E2C1C4C0022008EF86A /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
-		71009E3E1C4C0D0E008EF86A /* missbeez.png in Resources */ = {isa = PBXBuildFile; fileRef = 71009E3D1C4C0D0E008EF86A /* missbeez.png */; settings = {ASSET_TAGS = (); }; };
-		71009E401C4C3EDD008EF86A /* MyFBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		71009E2D1C4C0022008EF86A /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E0D1C4C0022008EF86A /* MKAnnotationView+WebCache.m */; };
+		71009E2E1C4C0022008EF86A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E0F1C4C0022008EF86A /* NSData+ImageContentType.m */; };
+		71009E2F1C4C0022008EF86A /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E111C4C0022008EF86A /* SDImageCache.m */; };
+		71009E301C4C0022008EF86A /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E131C4C0022008EF86A /* SDWebImageCompat.m */; };
+		71009E311C4C0022008EF86A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E151C4C0022008EF86A /* SDWebImageDecoder.m */; };
+		71009E321C4C0022008EF86A /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E171C4C0022008EF86A /* SDWebImageDownloader.m */; };
+		71009E331C4C0022008EF86A /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E191C4C0022008EF86A /* SDWebImageDownloaderOperation.m */; };
+		71009E341C4C0022008EF86A /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E1B1C4C0022008EF86A /* SDWebImageManager.m */; };
+		71009E351C4C0022008EF86A /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E1E1C4C0022008EF86A /* SDWebImagePrefetcher.m */; };
+		71009E361C4C0022008EF86A /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E201C4C0022008EF86A /* UIButton+WebCache.m */; };
+		71009E371C4C0022008EF86A /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E221C4C0022008EF86A /* UIImage+GIF.m */; };
+		71009E381C4C0022008EF86A /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E241C4C0022008EF86A /* UIImage+MultiFormat.m */; };
+		71009E391C4C0022008EF86A /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E261C4C0022008EF86A /* UIImage+WebP.m */; };
+		71009E3A1C4C0022008EF86A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E281C4C0022008EF86A /* UIImageView+HighlightedWebCache.m */; };
+		71009E3B1C4C0022008EF86A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E2A1C4C0022008EF86A /* UIImageView+WebCache.m */; };
+		71009E3C1C4C0022008EF86A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71009E2C1C4C0022008EF86A /* UIView+WebCacheOperation.m */; };
+		71009E3E1C4C0D0E008EF86A /* missbeez.png in Resources */ = {isa = PBXBuildFile; fileRef = 71009E3D1C4C0D0E008EF86A /* missbeez.png */; };
+		71009E401C4C3EDD008EF86A /* MyFBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */; };
+		716BDBEC1C53DF30006375B6 /* ManicureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BDBEB1C53DF30006375B6 /* ManicureVC.swift */; };
+		716BDBEE1C53E64F006375B6 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 716BDBED1C53E64F006375B6 /* swipe.png */; };
 		71953C9C1C48E20600625A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9B1C48E20600625A06 /* AppDelegate.swift */; };
 		71953C9E1C48E20600625A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953C9D1C48E20600625A06 /* ViewController.swift */; };
 		71953CA11C48E20600625A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953C9F1C48E20600625A06 /* Main.storyboard */; };
@@ -33,8 +35,8 @@
 		71953CA61C48E20600625A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71953CA41C48E20600625A06 /* LaunchScreen.storyboard */; };
 		71953CB11C48E20700625A06 /* MissBizBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953CB01C48E20700625A06 /* MissBizBBTests.swift */; };
 		71953CBC1C48E20700625A06 /* MissBizBBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953CBB1C48E20700625A06 /* MissBizBBUITests.swift */; };
-		71953CE41C48EB6400625A06 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE31C48EB6400625A06 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		71953CE61C48EB7200625A06 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE51C48EB7200625A06 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		71953CE41C48EB6400625A06 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE31C48EB6400625A06 /* FBSDKCoreKit.framework */; };
+		71953CE61C48EB7200625A06 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CE51C48EB7200625A06 /* FBSDKLoginKit.framework */; };
 		71953CF61C4909D500625A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF51C4909D500625A06 /* AudioToolbox.framework */; };
 		71953CF81C4909E100625A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF71C4909E100625A06 /* CFNetwork.framework */; };
 		71953CFA1C4909EC00625A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CF91C4909EC00625A06 /* CoreGraphics.framework */; };
@@ -45,10 +47,10 @@
 		71953D041C490A2200625A06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D031C490A2200625A06 /* SystemConfiguration.framework */; };
 		71953D051C490A2A00625A06 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CDD1C48E34200625A06 /* libz.tbd */; };
 		71953D061C490A3500625A06 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953CDF1C48E34E00625A06 /* libsqlite3.tbd */; };
-		71953D1C1C4910A900625A06 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
-		71953D1D1C4910A900625A06 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1A1C4910A900625A06 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		71953D1E1C4910A900625A06 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1B1C4910A900625A06 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
-		71953D231C49241400625A06 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953D221C49241400625A06 /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
+		71953D1C1C4910A900625A06 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D191C4910A900625A06 /* ParseFacebookUtilsV4.framework */; };
+		71953D1D1C4910A900625A06 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1A1C4910A900625A06 /* Bolts.framework */; };
+		71953D1E1C4910A900625A06 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953D1B1C4910A900625A06 /* Parse.framework */; };
+		71953D231C49241400625A06 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71953D221C49241400625A06 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		71009E2C1C4C0022008EF86A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		71009E3D1C4C0D0E008EF86A /* missbeez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missbeez.png; sourceTree = "<group>"; };
 		71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFBPageViewController.swift; sourceTree = "<group>"; };
+		716BDBEB1C53DF30006375B6 /* ManicureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManicureVC.swift; sourceTree = "<group>"; };
+		716BDBED1C53E64F006375B6 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
 		71953C981C48E20600625A06 /* MissBizBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissBizBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71953C9B1C48E20600625A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71953C9D1C48E20600625A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,10 +257,12 @@
 		71953C9A1C48E20600625A06 /* MissBizBB */ = {
 			isa = PBXGroup;
 			children = (
+				716BDBED1C53E64F006375B6 /* swipe.png */,
 				71009E3D1C4C0D0E008EF86A /* missbeez.png */,
 				71953C9B1C48E20600625A06 /* AppDelegate.swift */,
 				71953C9D1C48E20600625A06 /* ViewController.swift */,
 				71953D221C49241400625A06 /* SignUpVC.swift */,
+				716BDBEB1C53DF30006375B6 /* ManicureVC.swift */,
 				71953C9F1C48E20600625A06 /* Main.storyboard */,
 				71009E3F1C4C3EDD008EF86A /* MyFBPageViewController.swift */,
 				71953CA21C48E20600625A06 /* Assets.xcassets */,
@@ -413,6 +419,7 @@
 			files = (
 				71953CA61C48E20600625A06 /* LaunchScreen.storyboard in Resources */,
 				71009E3E1C4C0D0E008EF86A /* missbeez.png in Resources */,
+				716BDBEE1C53E64F006375B6 /* swipe.png in Resources */,
 				71953CA31C48E20600625A06 /* Assets.xcassets in Resources */,
 				71953CA11C48E20600625A06 /* Main.storyboard in Resources */,
 			);
@@ -453,6 +460,7 @@
 				71009E331C4C0022008EF86A /* SDWebImageDownloaderOperation.m in Sources */,
 				71953D231C49241400625A06 /* SignUpVC.swift in Sources */,
 				71009E361C4C0022008EF86A /* UIButton+WebCache.m in Sources */,
+				716BDBEC1C53DF30006375B6 /* ManicureVC.swift in Sources */,
 				71009E351C4C0022008EF86A /* SDWebImagePrefetcher.m in Sources */,
 				71009E3B1C4C0022008EF86A /* UIImageView+WebCache.m in Sources */,
 				71009E301C4C0022008EF86A /* SDWebImageCompat.m in Sources */,
