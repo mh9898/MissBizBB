@@ -12,23 +12,11 @@ import Parse
 
 class ContactsViewController: UITableViewController {
     
-    @IBAction func de(sender: AnyObject) {
-        
-//        let query = PFUser.query()!
-//        
-//        query.whereKey("objectId", containedIn: PFUser.currentUser()?["accepted"] as! [String])
-//        
-//        query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
-//           
-//            for result in results! {
-//                result.deleteEventually()
-//            }
-//            
-//        }
-//
-    }
-       var usernames = [String]()
+    var usernames = [String]()
     var images = [UIImage]()
+    
+    var selectedUser = ""
+    var selectedImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +104,29 @@ class ContactsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.selectedUser = usernames[indexPath.row]
+        self.selectedImage = images[indexPath.row]
+        
+        self.performSegueWithIdentifier("listToDetail", sender: self)
+        
+    }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        let detailVC = segue.destinationViewController as! DetailViewController
+        
+        detailVC.name = self.selectedUser
+        detailVC.image = self.selectedImage
+    }
+   
+
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -152,14 +163,5 @@ class ContactsViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

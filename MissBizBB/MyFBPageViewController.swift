@@ -10,6 +10,11 @@ import UIKit
 
 class MyFBPageViewController: UIViewController {
 
+    @IBAction func back(sender: AnyObject) {
+       
+        self.dismissViewControllerAnimated(true, completion: nil);
+        
+    }
     
     @IBAction func youTube(sender: AnyObject) {
         

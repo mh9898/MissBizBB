@@ -159,9 +159,6 @@
                                     <constraint firstAttribute="width" constant="69" id="XXg-fe-xar"/>
                                 </constraints>
                                 <state key="normal" title="Your FB"/>
-                                <connections>
-                                    <segue destination="spc-Mm-gR0" kind="show" id="BbL-Iy-Xg0"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33139581839999999" green="0.77908969179999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -282,13 +279,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8t-6c-SNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="1023"/>
+            <point key="canvasLocation" x="1945" y="1023"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="89W-uZ-kGX">
             <objects>
                 <tableViewController id="lsr-2j-qWk" customClass="ContactsViewController" customModule="MissBizBB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ibb-xr-f3G">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ibb-xr-f3G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,20 +299,15 @@
                                             <segue destination="0Ws-4l-OcX" kind="show" id="wHr-iI-Vde"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" title="Delete" id="WMU-bE-ivd">
-                                        <connections>
-                                            <action selector="de:" destination="lsr-2j-qWk" id="Ylu-bM-UdL"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="VOp-g5-VYX">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="VOp-g5-VYX">
+                                <rect key="frame" x="0.0" y="72" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOp-g5-VYX" id="fQG-7E-sDz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -325,10 +317,95 @@
                             <outlet property="delegate" destination="lsr-2j-qWk" id="X0y-Xy-Z6O"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="tnU-7W-aI0" kind="show" identifier="listToDetail" id="A2I-ti-7A9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpo-BF-LUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="1048"/>
+            <point key="canvasLocation" x="2672" y="1048"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="SzW-S6-naf">
+            <objects>
+                <viewController id="tnU-7W-aI0" customClass="DetailViewController" customModule="MissBizBB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="72l-KP-qo8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0q3-7Z-Us2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P23-Z7-r2H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0F-gw-YaU">
+                                <rect key="frame" x="223" y="437" width="154" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="38F-lK-dVa"/>
+                                    <constraint firstAttribute="height" constant="21" id="3e8-zE-lZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BR-qD-Apm">
+                                <rect key="frame" x="20" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="lsr-2j-qWk" kind="show" id="FPG-lg-FCK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJK-fI-tTP">
+                                <rect key="frame" x="20" y="209" width="560" height="182"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-CD-q2i">
+                                <rect key="frame" x="503" y="171" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AWU-0W-JYq"/>
+                                    <constraint firstAttribute="width" constant="77" id="JA1-Ma-NMS"/>
+                                </constraints>
+                                <state key="normal" title="Post On FB"/>
+                                <connections>
+                                    <action selector="fbButt:" destination="tnU-7W-aI0" eventType="touchUpInside" id="eTH-km-0gB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sY-Mm-I7z">
+                                <rect key="frame" x="20" y="171" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="2oT-Ge-Hap"/>
+                                    <constraint firstAttribute="height" constant="30" id="hJk-AH-frw"/>
+                                </constraints>
+                                <state key="normal" title="My FB"/>
+                                <connections>
+                                    <segue destination="spc-Mm-gR0" kind="show" id="lL7-CL-B7r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SJK-fI-tTP" firstAttribute="leading" secondItem="P23-Z7-r2H" secondAttribute="leadingMargin" id="2pY-ge-Ww6"/>
+                            <constraint firstItem="9BR-qD-Apm" firstAttribute="top" secondItem="72l-KP-qo8" secondAttribute="bottom" id="3Nu-J5-C4Q"/>
+                            <constraint firstItem="3sY-Mm-I7z" firstAttribute="top" secondItem="72l-KP-qo8" secondAttribute="bottom" constant="151" id="5qJ-nk-Z16"/>
+                            <constraint firstItem="3sY-Mm-I7z" firstAttribute="leading" secondItem="P23-Z7-r2H" secondAttribute="leadingMargin" id="6Ll-gv-DNl"/>
+                            <constraint firstItem="9BR-qD-Apm" firstAttribute="leading" secondItem="P23-Z7-r2H" secondAttribute="leadingMargin" id="6wF-xS-gaW"/>
+                            <constraint firstItem="SJK-fI-tTP" firstAttribute="centerY" secondItem="P23-Z7-r2H" secondAttribute="centerY" id="7dD-gc-k5h"/>
+                            <constraint firstItem="SJK-fI-tTP" firstAttribute="top" secondItem="3sY-Mm-I7z" secondAttribute="bottom" constant="8" id="9qn-4x-Ha1"/>
+                            <constraint firstItem="7ar-CD-q2i" firstAttribute="leading" secondItem="3sY-Mm-I7z" secondAttribute="trailing" constant="440" id="H44-Pj-NX3"/>
+                            <constraint firstItem="SJK-fI-tTP" firstAttribute="centerX" secondItem="P23-Z7-r2H" secondAttribute="centerX" id="LQx-WS-4F6"/>
+                            <constraint firstItem="7ar-CD-q2i" firstAttribute="top" secondItem="72l-KP-qo8" secondAttribute="bottom" constant="151" id="MFP-OD-iad"/>
+                            <constraint firstItem="z0F-gw-YaU" firstAttribute="top" secondItem="SJK-fI-tTP" secondAttribute="bottom" constant="46" id="P91-K9-XJF"/>
+                            <constraint firstItem="z0F-gw-YaU" firstAttribute="centerX" secondItem="P23-Z7-r2H" secondAttribute="centerX" id="Y87-xE-0GR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7ar-CD-q2i" secondAttribute="trailing" id="hmi-7p-4Kj"/>
+                            <constraint firstItem="SJK-fI-tTP" firstAttribute="top" secondItem="3sY-Mm-I7z" secondAttribute="bottom" constant="8" id="kra-Or-cTm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="z0F-gw-YaU" id="rd6-1V-M3b"/>
+                        <outlet property="pictureView" destination="SJK-fI-tTP" id="Tme-SH-LeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqy-YC-bDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3409" y="1043"/>
         </scene>
         <!--MyFB Page View Controller-->
         <scene sceneID="YSa-55-H9Y">
@@ -350,7 +427,7 @@
                                 <rect key="frame" x="20" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="y6X-nj-Wsh" kind="show" id="R8i-Hc-BHt"/>
+                                    <action selector="back:" destination="spc-Mm-gR0" eventType="touchUpInside" id="8zd-2s-aml"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missbeez.png" translatesAutoresizingMaskIntoConstraints="NO" id="zMh-qY-6sM">
@@ -390,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0h-6J-yUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="261"/>
+            <point key="canvasLocation" x="4096" y="1048"/>
         </scene>
     </scenes>
     <resources>
@@ -398,8 +475,8 @@
         <image name="swipe.png" width="270" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PrA-B3-63I"/>
         <segue reference="wHr-iI-Vde"/>
-        <segue reference="cwd-JP-7aa"/>
-        <segue reference="h3N-b6-GiQ"/>
+        <segue reference="FPG-lg-FCK"/>
     </inferredMetricsTieBreakers>
 </document>
