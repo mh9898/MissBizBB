@@ -129,14 +129,24 @@ class ManicureVC: UIViewController {
         let mancuirePro : Array = [(PFUser.currentUser()?["Manicure"])! as! Bool == true]
         
         
-        //mancuirePro.count
-//        if ignoreUsers.count ==  6 {
-//            
-//            //self.performSegueWithIdentifier("manicureSegue", sender: self)
-////            self.dismissViewControllerAnimated(true, completion: nil);
-//        
-//            print("last")
-//        }
+        mancuirePro.count
+        
+        if ignoreUsers.count ==  7 {
+            
+            //self.performSegueWithIdentifier("manicureSegue", sender: self)
+//            self.dismissViewControllerAnimated(true, completion: nil);
+            
+            let alert = UIAlertController(title: "No More user", message: "Thank you for choosing - see your contacts", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
+                self.performSegueWithIdentifier("swipeToList", sender: self)})
+            
+            alert.addAction(okAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        
+            print("last")
+        }
         
         query?.whereKey("objectId", notContainedIn: ignoreUsers)
         

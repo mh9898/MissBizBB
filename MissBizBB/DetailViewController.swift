@@ -50,6 +50,10 @@ class DetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        pictureView.layer.cornerRadius = 10
+        pictureView.clipsToBounds = true
+
         nameLabel.text = name
         pictureView.image = image
     }

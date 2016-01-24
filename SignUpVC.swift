@@ -71,31 +71,7 @@ class SignUpVC: UIViewController {
 
     }
     
-    @IBAction func fbButt() {
-        
-        
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            
-            let fbSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            fbSheet.addURL(NSURL(string: "http://www.missbeez.com/"))
-            
-            presentViewController(fbSheet, animated: true, completion: nil)
-        }
-            
-        else{
-            
-            let alert = UIAlertController(title: "FB Setup", message: "Please login to your FaceBook account in setting", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-            
-//            self.performSegueWithIdentifier("loginManicure", sender: AnyObject?)
-        }
-    }
-    
    
-    
     
     @IBAction func submit(sender: AnyObject) {
         
@@ -105,7 +81,6 @@ class SignUpVC: UIViewController {
             try PFUser.currentUser()?.save()
             
             let alert = UIAlertController(title: "Sucess", message: "Thank you for sumbiting", preferredStyle: UIAlertControllerStyle.Alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.performSegueWithIdentifier("manicureSegue", sender: self)})
             
