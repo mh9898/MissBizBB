@@ -82,12 +82,9 @@ class ManicureVC: UIViewController {
                 catch{
                     print(error)
                 }
-
-                
             }
             
-            
-            
+            //RESEST IMAGE to CENTER
             rotation = CGAffineTransformMakeRotation(0)
             stretch = CGAffineTransformScale(rotation, 1, 1)
             label.transform = stretch
@@ -197,6 +194,7 @@ class ManicureVC: UIViewController {
         super.viewDidLoad()
         
         let gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:"))
+        
         userImage.addGestureRecognizer(gesture)
         
         userImage.userInteractionEnabled = true
@@ -205,10 +203,6 @@ class ManicureVC: UIViewController {
         
         userImage.layer.cornerRadius = 10
         userImage.clipsToBounds = true
-        
-        
-
-        
     }
 
     override func didReceiveMemoryWarning() {

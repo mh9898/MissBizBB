@@ -87,10 +87,7 @@ class SignUpVC: UIViewController {
             alert.addAction(okAction)
             
             self.presentViewController(alert, animated: true, completion: nil)
-            
-            
         }
-            
             
         catch{
             print(error)

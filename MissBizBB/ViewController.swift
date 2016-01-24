@@ -42,7 +42,6 @@ class ViewController: UIViewController {
                        self.performSegueWithIdentifier("ShowSgininScreen", sender: self)
                     }
                    
-                    
                 }
                 
             }

@@ -60,20 +60,11 @@ class ContactsViewController: UITableViewController {
                                 self.tableView.reloadData()
                                 
                             }
-                            
-                            
                         }
-                        
-                        
                     }
-                    
-                    
                 }
-                
                 self.tableView.reloadData()
-                
             }
-            
         }
 
     }

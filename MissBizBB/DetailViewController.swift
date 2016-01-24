@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     var name = ""
     var image = UIImage()
     
-
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var pictureView: UIImageView!
@@ -37,12 +36,10 @@ class DetailViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             self.presentViewController(alert, animated: true, completion: nil)
-            
         }
-   
-        
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,15 +60,5 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
